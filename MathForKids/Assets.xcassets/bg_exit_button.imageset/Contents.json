@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "math_for_kids_icon@1x.png",
+      "filename" : "b_exit@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "math_for_kids_icon@2x.png",
+      "filename" : "b_exit@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "math_for_kids_icon@3x.png",
+      "filename" : "b_exit@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="carter_one_regular.ttf">
+            <string>CarterOne</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -26,14 +31,58 @@
                                     <constraint firstAttribute="height" constant="250" id="wu6-XF-c6W"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math For Kids" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-GX-41v">
+                                <rect key="frame" x="134" y="153.66666666666666" width="160" height="37"/>
+                                <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TBY-bc-6Fh">
+                                <rect key="frame" x="139" y="358" width="150" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-0a-Edo">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                        <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Play" backgroundImage="bg_play_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-Jc-dIC">
+                                        <rect key="frame" x="0.0" y="70" width="150" height="70"/>
+                                        <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Options" backgroundImage="bg_options_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3w-dH-AsK">
+                                        <rect key="frame" x="0.0" y="140" width="150" height="70"/>
+                                        <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="23"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Exit" backgroundImage="bg_exit_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="NCL-UV-ppc"/>
+                                    <constraint firstAttribute="height" constant="210" id="s8H-8K-pDZ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fCr-GX-41v" firstAttribute="centerY" secondItem="WNb-vC-buP" secondAttribute="centerY" id="0eT-WP-VGZ"/>
                             <constraint firstAttribute="bottom" secondItem="5nU-zf-UkK" secondAttribute="bottom" id="CAf-xD-5JF"/>
                             <constraint firstItem="5nU-zf-UkK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DBK-gf-UIp"/>
+                            <constraint firstItem="TBY-bc-6Fh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DVR-UW-Yzz"/>
+                            <constraint firstItem="fCr-GX-41v" firstAttribute="centerY" secondItem="WNb-vC-buP" secondAttribute="centerY" id="JpI-ya-HqN"/>
                             <constraint firstItem="5nU-zf-UkK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M2x-e8-7r4"/>
                             <constraint firstItem="WNb-vC-buP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJr-dH-qcb"/>
+                            <constraint firstItem="fCr-GX-41v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddm-bN-bzB"/>
+                            <constraint firstItem="TBY-bc-6Fh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eVu-XS-PxI"/>
                             <constraint firstItem="WNb-vC-buP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="fXS-1D-Qbz"/>
                             <constraint firstAttribute="trailing" secondItem="5nU-zf-UkK" secondAttribute="trailing" id="z24-FD-kqQ"/>
                         </constraints>
@@ -41,11 +90,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.717557251908396" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="26.635514018691588" y="-34.98920086393089"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bg_exit_button" width="196.66667175292969" height="97.333335876464844"/>
         <image name="bg_main_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <image name="bg_options_button" width="196.66667175292969" height="97.333335876464844"/>
+        <image name="bg_play_button" width="196.66667175292969" height="97.333335876464844"/>
         <image name="iv_sun" width="93.333335876464844" height="93.333335876464844"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

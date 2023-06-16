@@ -13,6 +13,7 @@
 		CCB5D0122A3AEED0004B9A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB5D0102A3AEED0004B9A36 /* Main.storyboard */; };
 		CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */; };
 		CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */; };
+		CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCDF13D62A3C6CBF00885E9D /* carter_one_regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCB5D0162A3AEED2004B9A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCB5D0182A3AEED2004B9A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDF13D62A3C6CBF00885E9D /* carter_one_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = carter_one_regular.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		CCB5D0092A3AEED0004B9A36 /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				CCDF13D82A3C735000885E9D /* Controllers */,
+				CCDF13D52A3C6C8E00885E9D /* Fonts */,
 				CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */,
 				CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */,
-				CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */,
 				CCB5D0102A3AEED0004B9A36 /* Main.storyboard */,
 				CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */,
 				CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */,
 				CCB5D0182A3AEED2004B9A36 /* Info.plist */,
 			);
 			path = MathForKids;
+			sourceTree = "<group>";
+		};
+		CCDF13D52A3C6C8E00885E9D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCDF13D62A3C6CBF00885E9D /* carter_one_regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CCDF13D82A3C735000885E9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCDF13D92A3C736500885E9D /* Main */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CCDF13D92A3C736500885E9D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */,
+				CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */,
 				CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */,
 				CCB5D0122A3AEED0004B9A36 /* Main.storyboard in Resources */,
 			);
