@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */; };
+		CC6E7D412A3E41A700E326CA /* PlayMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */; };
 		CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */; };
 		CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */; };
 		CCB5D00F2A3AEED0004B9A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */; };
@@ -14,9 +16,13 @@
 		CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */; };
 		CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */; };
 		CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCDF13D62A3C6CBF00885E9D /* carter_one_regular.ttf */; };
+		CCDF13DD2A3C75F400885E9D /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF13DB2A3C75F400885E9D /* OptionsViewController.swift */; };
+		CCDF13DE2A3C75F400885E9D /* OptionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDF13DC2A3C75F400885E9D /* OptionsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMenuViewController.swift; sourceTree = "<group>"; };
+		CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayMenuViewController.xib; sourceTree = "<group>"; };
 		CCB5D0072A3AEED0004B9A36 /* Math For Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math For Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		CCB5D0162A3AEED2004B9A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCB5D0182A3AEED2004B9A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCDF13D62A3C6CBF00885E9D /* carter_one_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = carter_one_regular.ttf; sourceTree = "<group>"; };
+		CCDF13DB2A3C75F400885E9D /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		CCDF13DC2A3C75F400885E9D /* OptionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC42B8B82A3E33D3009AEA18 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */,
+				CCB5D0102A3AEED0004B9A36 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC6E7D3D2A3E416D00E326CA /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */,
+				CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */,
+			);
+			path = Play;
+			sourceTree = "<group>";
+		};
 		CCB5CFFE2A3AEED0004B9A36 = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +88,6 @@
 				CCDF13D52A3C6C8E00885E9D /* Fonts */,
 				CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */,
 				CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */,
-				CCB5D0102A3AEED0004B9A36 /* Main.storyboard */,
 				CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */,
 				CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */,
 				CCB5D0182A3AEED2004B9A36 /* Info.plist */,
@@ -81,17 +106,20 @@
 		CCDF13D82A3C735000885E9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CCDF13D92A3C736500885E9D /* Main */,
+				CC6E7D3D2A3E416D00E326CA /* Play */,
+				CC42B8B82A3E33D3009AEA18 /* Main */,
+				CCDF13DA2A3C75C200885E9D /* Options */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		CCDF13D92A3C736500885E9D /* Main */ = {
+		CCDF13DA2A3C75C200885E9D /* Options */ = {
 			isa = PBXGroup;
 			children = (
-				CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */,
+				CCDF13DB2A3C75F400885E9D /* OptionsViewController.swift */,
+				CCDF13DC2A3C75F400885E9D /* OptionsViewController.xib */,
 			);
-			path = Main;
+			path = Options;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */,
+				CCDF13DE2A3C75F400885E9D /* OptionsViewController.xib in Resources */,
 				CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */,
 				CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */,
 				CCB5D0122A3AEED0004B9A36 /* Main.storyboard in Resources */,
+				CC6E7D412A3E41A700E326CA /* PlayMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5D00F2A3AEED0004B9A36 /* ViewController.swift in Sources */,
+				CCDF13DD2A3C75F400885E9D /* OptionsViewController.swift in Sources */,
 				CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */,
+				CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */,
 				CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

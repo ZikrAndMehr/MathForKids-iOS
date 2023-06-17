@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dMv-RT-9jI">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,50 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="99T-8Q-x7E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dMv-RT-9jI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lrG-3z-HdA">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cJ3-Pp-6Rb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nu6-gp-IG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26.511627906976745" y="-35.407725321888414"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Math_For_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_main_controller" translatesAutoresizingMaskIntoConstraints="NO" id="5nU-zf-UkK">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_main_controller" translatesAutoresizingMaskIntoConstraints="NO" id="5nU-zf-UkK" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iv_sun" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-vC-buP">
-                                <rect key="frame" x="64" y="47" width="300" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iv_sun" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-vC-buP" userLabel="ImageView">
+                                <rect key="frame" x="65" y="103" width="300" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="uEi-hv-pSb"/>
                                     <constraint firstAttribute="height" constant="250" id="wu6-XF-c6W"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math For Kids" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-GX-41v">
-                                <rect key="frame" x="134" y="153.66666666666666" width="160" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Math For Kids" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-GX-41v" userLabel="Label">
+                                <rect key="frame" x="135" y="209.66666666666666" width="160" height="37"/>
                                 <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TBY-bc-6Fh">
-                                <rect key="frame" x="139" y="358" width="150" height="210"/>
+                                <rect key="frame" x="140" y="385" width="150" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-0a-Edo">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
@@ -47,6 +65,9 @@
                                         <state key="normal" title="Play" backgroundImage="bg_play_button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="playButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j4a-ts-fHW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgL-Jc-dIC">
                                         <rect key="frame" x="0.0" y="70" width="150" height="70"/>
@@ -55,6 +76,9 @@
                                         <state key="normal" title="Options" backgroundImage="bg_options_button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="optionsButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3e-OA-PLK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3w-dH-AsK">
                                         <rect key="frame" x="0.0" y="140" width="150" height="70"/>
@@ -63,6 +87,9 @@
                                         <state key="normal" title="Exit" backgroundImage="bg_exit_button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="exitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eej-Qr-UYq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -77,9 +104,9 @@
                             <constraint firstItem="fCr-GX-41v" firstAttribute="centerY" secondItem="WNb-vC-buP" secondAttribute="centerY" id="0eT-WP-VGZ"/>
                             <constraint firstAttribute="bottom" secondItem="5nU-zf-UkK" secondAttribute="bottom" id="CAf-xD-5JF"/>
                             <constraint firstItem="5nU-zf-UkK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DBK-gf-UIp"/>
-                            <constraint firstItem="TBY-bc-6Fh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DVR-UW-Yzz"/>
                             <constraint firstItem="fCr-GX-41v" firstAttribute="centerY" secondItem="WNb-vC-buP" secondAttribute="centerY" id="JpI-ya-HqN"/>
                             <constraint firstItem="5nU-zf-UkK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M2x-e8-7r4"/>
+                            <constraint firstItem="TBY-bc-6Fh" firstAttribute="top" secondItem="WNb-vC-buP" secondAttribute="bottom" constant="32" id="Xhr-tg-OAy"/>
                             <constraint firstItem="WNb-vC-buP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cJr-dH-qcb"/>
                             <constraint firstItem="fCr-GX-41v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddm-bN-bzB"/>
                             <constraint firstItem="TBY-bc-6Fh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eVu-XS-PxI"/>
@@ -87,10 +114,11 @@
                             <constraint firstAttribute="trailing" secondItem="5nU-zf-UkK" secondAttribute="trailing" id="z24-FD-kqQ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JXH-6f-z0C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.635514018691588" y="-34.98920086393089"/>
+            <point key="canvasLocation" x="925.11627906976742" y="-35.407725321888414"/>
         </scene>
     </scenes>
     <resources>

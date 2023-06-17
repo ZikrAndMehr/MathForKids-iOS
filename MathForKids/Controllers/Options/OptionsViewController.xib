@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController" customModule="Math_For_Kids" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_options_controller" translatesAutoresizingMaskIntoConstraints="NO" id="D4A-0B-B9v" userLabel="ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-PJ-F4a" userLabel="Back">
+                    <rect key="frame" x="14" y="59" width="45" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="SRQ-6p-3Rz"/>
+                        <constraint firstAttribute="height" constant="52" id="Uet-Mh-yWT"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="bg_back_button"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="1CU-Sd-BQu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Meb-PJ-F4a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Wd-oL-ZSr"/>
+                <constraint firstAttribute="trailing" secondItem="D4A-0B-B9v" secondAttribute="trailing" id="HGV-LK-kYo"/>
+                <constraint firstItem="D4A-0B-B9v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lzu-SD-MvV"/>
+                <constraint firstItem="Meb-PJ-F4a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="PlV-1N-iWV"/>
+                <constraint firstItem="D4A-0B-B9v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rqs-OT-yCn"/>
+                <constraint firstAttribute="bottom" secondItem="D4A-0B-B9v" secondAttribute="bottom" id="pRg-qy-g1D"/>
+            </constraints>
+            <point key="canvasLocation" x="25" y="-15"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_back_button" width="93" height="107.33333587646484"/>
+        <image name="bg_options_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
