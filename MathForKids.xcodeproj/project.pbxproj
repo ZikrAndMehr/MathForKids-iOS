@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23704E2A3EF504001B838E /* AppConstants.swift */; };
 		CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */; };
 		CC6E7D412A3E41A700E326CA /* PlayMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */; };
+		CC6E7D452A3E4BDC00E326CA /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6E7D432A3E4BDC00E326CA /* GameModeViewController.swift */; };
+		CC6E7D462A3E4BDC00E326CA /* GameModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E7D442A3E4BDC00E326CA /* GameModeViewController.xib */; };
 		CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */; };
 		CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */; };
 		CCB5D00F2A3AEED0004B9A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5D00E2A3AEED0004B9A36 /* ViewController.swift */; };
@@ -21,8 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC23704E2A3EF504001B838E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMenuViewController.swift; sourceTree = "<group>"; };
 		CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayMenuViewController.xib; sourceTree = "<group>"; };
+		CC6E7D432A3E4BDC00E326CA /* GameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
+		CC6E7D442A3E4BDC00E326CA /* GameModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameModeViewController.xib; sourceTree = "<group>"; };
 		CCB5D0072A3AEED0004B9A36 /* Math For Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Math For Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC23704C2A3EF0F8001B838E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */,
+				CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */,
+				CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */,
+				CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */,
+				CCB5D0182A3AEED2004B9A36 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CC23704D2A3EF1A2001B838E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC23704E2A3EF504001B838E /* AppConstants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		CC42B8B82A3E33D3009AEA18 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +85,20 @@
 		CC6E7D3D2A3E416D00E326CA /* Play */ = {
 			isa = PBXGroup;
 			children = (
+				CC6E7D422A3E4BB500E326CA /* GameMode */,
 				CC6E7D3E2A3E41A700E326CA /* PlayMenuViewController.swift */,
 				CC6E7D3F2A3E41A700E326CA /* PlayMenuViewController.xib */,
 			);
 			path = Play;
+			sourceTree = "<group>";
+		};
+		CC6E7D422A3E4BB500E326CA /* GameMode */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E7D432A3E4BDC00E326CA /* GameModeViewController.swift */,
+				CC6E7D442A3E4BDC00E326CA /* GameModeViewController.xib */,
+			);
+			path = GameMode;
 			sourceTree = "<group>";
 		};
 		CCB5CFFE2A3AEED0004B9A36 = {
@@ -84,13 +120,10 @@
 		CCB5D0092A3AEED0004B9A36 /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				CC23704D2A3EF1A2001B838E /* Utils */,
+				CC23704C2A3EF0F8001B838E /* Application */,
 				CCDF13D82A3C735000885E9D /* Controllers */,
 				CCDF13D52A3C6C8E00885E9D /* Fonts */,
-				CCB5D00A2A3AEED0004B9A36 /* AppDelegate.swift */,
-				CCB5D00C2A3AEED0004B9A36 /* SceneDelegate.swift */,
-				CCB5D0132A3AEED2004B9A36 /* Assets.xcassets */,
-				CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */,
-				CCB5D0182A3AEED2004B9A36 /* Info.plist */,
 			);
 			path = MathForKids;
 			sourceTree = "<group>";
@@ -181,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */,
+				CC6E7D462A3E4BDC00E326CA /* GameModeViewController.xib in Resources */,
 				CCDF13DE2A3C75F400885E9D /* OptionsViewController.xib in Resources */,
 				CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */,
 				CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */,
@@ -197,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5D00F2A3AEED0004B9A36 /* ViewController.swift in Sources */,
+				CC6E7D452A3E4BDC00E326CA /* GameModeViewController.swift in Sources */,
 				CCDF13DD2A3C75F400885E9D /* OptionsViewController.swift in Sources */,
 				CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */,
+				CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */,
 				CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */,
 				CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */,
 			);
@@ -348,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MathForKids/Info.plist;
+				INFOPLIST_FILE = MathForKids/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -374,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MathForKids/Info.plist;
+				INFOPLIST_FILE = MathForKids/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
