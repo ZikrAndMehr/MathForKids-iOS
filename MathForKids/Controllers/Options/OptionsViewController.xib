@@ -3,13 +3,25 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="carter_one_regular.ttf">
+            <string>CarterOne</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionsViewController" customModule="Math_For_Kids" customModuleProvider="target">
             <connections>
+                <outlet property="maximumLabel" destination="l2P-ds-Bxs" id="5EQ-bF-jtn"/>
+                <outlet property="maximumSlider" destination="gmO-vu-fSf" id="915-qm-gbx"/>
+                <outlet property="minimumLabel" destination="JBD-Zf-2wS" id="VX4-cq-JXn"/>
+                <outlet property="minimumSlider" destination="hVY-Ye-r10" id="sXu-dc-gvd"/>
+                <outlet property="secondsLabel" destination="5MR-9P-guB" id="E6H-fx-s1l"/>
+                <outlet property="secondsSlider" destination="I1P-U0-XXy" id="hwV-1k-l5a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,16 +45,120 @@
                         <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="1CU-Sd-BQu"/>
                     </connections>
                 </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pnf-li-ZGx">
+                    <rect key="frame" x="24" y="83" width="345" height="524"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time limit per Question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr5-RU-Toq" userLabel="Label">
+                            <rect key="frame" x="0.0" y="0.0" width="345" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="M3B-o1-IqH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-il-hXw">
+                            <rect key="frame" x="0.0" y="132" width="345" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-5K-03U" userLabel="Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9oX-kZ-v6g"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <color key="textColor" name="PrimaryColor3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MR-9P-guB" userLabel="Seconds">
+                                    <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="50"/>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="I1P-U0-XXy" userLabel="SecondsSlider">
+                            <rect key="frame" x="-2" y="194" width="349" height="31"/>
+                            <connections>
+                                <action selector="secondsSliderValueChanged:" destination="-1" eventType="valueChanged" id="Lzl-xG-iej"/>
+                            </connections>
+                        </slider>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digit Range" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQS-Sz-dKW" userLabel="Label">
+                            <rect key="frame" x="0.0" y="236" width="345" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="Ijc-oL-nzz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f8c-zj-zpS">
+                            <rect key="frame" x="0.0" y="328" width="345" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aF-Ko-uI6" userLabel="Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Ja0-s0-7G5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <color key="textColor" name="PrimaryColor3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBD-Zf-2wS" userLabel="Minimum">
+                                    <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="50"/>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="490" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-Ye-r10" userLabel="MinimumSlider">
+                            <rect key="frame" x="-2" y="390" width="349" height="31"/>
+                            <connections>
+                                <action selector="minimumSliderValueChanged:" destination="-1" eventType="valueChanged" id="IUE-OX-TsA"/>
+                            </connections>
+                        </slider>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="exw-Fp-cJd">
+                            <rect key="frame" x="0.0" y="432" width="345" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtG-36-a13" userLabel="Label">
+                                    <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="sQv-kK-2lt"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <color key="textColor" name="PrimaryColor3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2P-ds-Bxs" userLabel="Maximum">
+                                    <rect key="frame" x="172.66666666666663" y="0.0" width="172.33333333333337" height="50"/>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="gmO-vu-fSf" userLabel="MaximumSlider">
+                            <rect key="frame" x="-2" y="494" width="349" height="31"/>
+                            <connections>
+                                <action selector="maximumSliderValueChanged:" destination="-1" eventType="valueChanged" id="6dD-9h-jm9"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Meb-PJ-F4a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Wd-oL-ZSr"/>
+                <constraint firstItem="pnf-li-ZGx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="8JS-xp-dsE"/>
                 <constraint firstAttribute="trailing" secondItem="D4A-0B-B9v" secondAttribute="trailing" id="HGV-LK-kYo"/>
                 <constraint firstItem="D4A-0B-B9v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lzu-SD-MvV"/>
                 <constraint firstItem="Meb-PJ-F4a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="PlV-1N-iWV"/>
                 <constraint firstItem="D4A-0B-B9v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rqs-OT-yCn"/>
+                <constraint firstItem="pnf-li-ZGx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="od7-Vp-jCa"/>
                 <constraint firstAttribute="bottom" secondItem="D4A-0B-B9v" secondAttribute="bottom" id="pRg-qy-g1D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pnf-li-ZGx" secondAttribute="trailing" constant="24" id="ugZ-zP-zju"/>
             </constraints>
             <point key="canvasLocation" x="25" y="-15"/>
         </view>
@@ -50,6 +166,9 @@
     <resources>
         <image name="bg_back_button" width="93" height="107.33333587646484"/>
         <image name="bg_options_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <namedColor name="PrimaryColor3">
+            <color red="0.27843137254901962" green="0.25490196078431371" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

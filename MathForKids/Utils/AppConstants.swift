@@ -13,5 +13,12 @@ struct AppConstants {
     static let multiplication = "×"
     static let division = "÷"
     
+    static let keySecondsValue = "SECONDS"
+    static let secondsValue = 10
+    static let keyMinValue = "MIN"
+    static let minValue = 10
+    static let keyMaxValue = "MAX"
+    static let maxValue = 20
+    
     private init() {}
 }

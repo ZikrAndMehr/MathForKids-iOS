@@ -29,6 +29,12 @@ class GameModeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func practiceButtonClicked(_ sender: Any) {
+        let practiceVC = PracticeViewController(nibName: "PracticeViewController", bundle: nil)
+        self.navigationController?.pushViewController(practiceVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

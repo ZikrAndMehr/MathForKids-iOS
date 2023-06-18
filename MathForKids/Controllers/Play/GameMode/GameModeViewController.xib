@@ -56,6 +56,9 @@
                                     <state key="normal" title="Practice" backgroundImage="iv_practice">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="practiceButtonClicked:" destination="-1" eventType="touchUpInside" id="ZBk-Ok-g3B"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAS-Wh-OVK">
                                     <rect key="frame" x="165" y="0.0" width="140" height="140"/>
