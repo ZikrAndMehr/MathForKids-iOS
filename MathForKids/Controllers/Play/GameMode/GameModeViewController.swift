@@ -9,11 +9,10 @@ import UIKit
 
 class GameModeViewController: UIViewController {
     
-    let keyOperation: String
+    private let keyOperation: String
     
     init(keyOperation: String) {
         self.keyOperation = keyOperation
-        print(keyOperation)
         super.init(nibName: "GameModeViewController", bundle: nil)
     }
     
@@ -29,20 +28,8 @@ class GameModeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func practiceButtonClicked(_ sender: Any) {
-        let practiceVC = PracticeViewController(nibName: "PracticeViewController", bundle: nil)
+        let practiceVC = PracticeViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(practiceVC, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

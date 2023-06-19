@@ -16,7 +16,7 @@ struct Question {
     private var c = 0
     private var random = Array(repeating: 0, count: 4)
     
-    init(operation: String, min: Int, max: Int) {
+    init(_ operation: String, _ min: Int, _ max: Int) {
         self.operation = operation
         self.min = min
         self.max = max
@@ -89,5 +89,9 @@ struct Question {
     
     func getC() -> Int {
         return c
+    }
+    
+    func getRandom() -> [Int] {
+        return random
     }
 }
