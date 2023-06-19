@@ -20,5 +20,7 @@ struct AppConstants {
     static let keyMaxValue = "MAX"
     static let maxValue = 20
     
+    static let equal = "="
+    
     private init() {}
 }

@@ -32,6 +32,10 @@ class PracticeViewController: UIViewController {
         
     }
     
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func optionAClicked(_ sender: Any) {
     }
     

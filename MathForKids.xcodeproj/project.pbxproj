@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23704E2A3EF504001B838E /* AppConstants.swift */; };
+		CC29B04A2A40277C00C6DAFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29B0492A40277C00C6DAFD /* Question.swift */; };
 		CC5635232A3F039F004C7323 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5635212A3F039F004C7323 /* PracticeViewController.swift */; };
 		CC5635242A3F039F004C7323 /* PracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5635222A3F039F004C7323 /* PracticeViewController.xib */; };
 		CC5635262A3F0548004C7323 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5635252A3F0548004C7323 /* Colors.xcassets */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		CC23704E2A3EF504001B838E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		CC29B0492A40277C00C6DAFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CC5635212A3F039F004C7323 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		CC5635222A3F039F004C7323 /* PracticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeViewController.xib; sourceTree = "<group>"; };
 		CC5635252A3F0548004C7323 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 				CC23704E2A3EF504001B838E /* AppConstants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		CC29B0482A40276A00C6DAFD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC29B0492A40277C00C6DAFD /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CC42B8B82A3E33D3009AEA18 /* Main */ = {
@@ -137,6 +147,7 @@
 		CCB5D0092A3AEED0004B9A36 /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				CC29B0482A40276A00C6DAFD /* Model */,
 				CC23704D2A3EF1A2001B838E /* Utils */,
 				CC23704C2A3EF0F8001B838E /* Application */,
 				CCDF13D82A3C735000885E9D /* Controllers */,
@@ -252,6 +263,7 @@
 				CCB5D00F2A3AEED0004B9A36 /* ViewController.swift in Sources */,
 				CC5635232A3F039F004C7323 /* PracticeViewController.swift in Sources */,
 				CC6E7D452A3E4BDC00E326CA /* GameModeViewController.swift in Sources */,
+				CC29B04A2A40277C00C6DAFD /* Question.swift in Sources */,
 				CCDF13DD2A3C75F400885E9D /* OptionsViewController.swift in Sources */,
 				CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */,
 				CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */,
