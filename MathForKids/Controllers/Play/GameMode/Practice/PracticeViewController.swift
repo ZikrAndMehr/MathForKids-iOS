@@ -9,19 +9,19 @@ import UIKit
 
 class PracticeViewController: UIViewController {
     
-    @IBOutlet weak var currentQuestionNumber: UILabel!
+    @IBOutlet private weak var currentQuestionNumber: UILabel!
     
-    @IBOutlet weak var numberOfCorrectQuestion: UILabel!
-    @IBOutlet weak var numberOfWrongQuestion: UILabel!
+    @IBOutlet private weak var numberOfCorrectQuestion: UILabel!
+    @IBOutlet private weak var numberOfWrongQuestion: UILabel!
     
-    @IBOutlet weak var a: UILabel!
-    @IBOutlet weak var operation: UILabel!
-    @IBOutlet weak var b: UILabel!
+    @IBOutlet private weak var a: UILabel!
+    @IBOutlet private weak var operation: UILabel!
+    @IBOutlet private weak var b: UILabel!
     
-    @IBOutlet weak var optionA: UIButton!
-    @IBOutlet weak var optionB: UIButton!
-    @IBOutlet weak var optionC: UIButton!
-    @IBOutlet weak var optionD: UIButton!
+    @IBOutlet private weak var optionA: UIButton!
+    @IBOutlet private weak var optionB: UIButton!
+    @IBOutlet private weak var optionC: UIButton!
+    @IBOutlet private weak var optionD: UIButton!
     
     private var min = AppConstants.minValue
     private var max = AppConstants.maxValue
@@ -93,11 +93,11 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    @IBAction func backButtonClicked(_ sender: Any) {
+    @IBAction private func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func optionAClicked(_ sender: UIButton) {
+    @IBAction private func optionAClicked(_ sender: UIButton) {
         if sender.titleLabel?.text == String(ans) {
             correctOptionSelected(button: sender)
         } else {
@@ -105,7 +105,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    @IBAction func optionBClicked(_ sender: UIButton) {
+    @IBAction private func optionBClicked(_ sender: UIButton) {
         if sender.titleLabel?.text == String(ans) {
             correctOptionSelected(button: sender)
         } else {
@@ -113,7 +113,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    @IBAction func optionCClicked(_ sender: UIButton) {
+    @IBAction private func optionCClicked(_ sender: UIButton) {
         if sender.titleLabel?.text == String(ans) {
             correctOptionSelected(button: sender)
         } else {
@@ -121,7 +121,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    @IBAction func optionDClicked(_ sender: UIButton) {
+    @IBAction private func optionDClicked(_ sender: UIButton) {
         if sender.titleLabel?.text == String(ans) {
             correctOptionSelected(button: sender)
         } else {
@@ -151,6 +151,7 @@ class PracticeViewController: UIViewController {
         showNextQuestion = true
         
         if questionNumber == 10 {
+            // TODO: needs to be modified after Reulult page
             self.navigationController?.popViewController(animated: true)
         } else {
             numberOfCorrectQuestion.text = String(correctQuestionsCount)
@@ -177,7 +178,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    func showToast(message: String) {
+    private func showToast(message: String) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         
         self.present(alertController, animated: true, completion: nil)

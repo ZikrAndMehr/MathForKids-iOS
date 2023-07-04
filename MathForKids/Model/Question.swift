@@ -8,6 +8,7 @@
 import Foundation
 
 struct Question {
+    
     private let operation: String
     private let min: Int
     private let max: Int
@@ -38,8 +39,7 @@ struct Question {
             while x != 0 {
                 if r == c {
                     r = Int.random(in: (c + (c / 2) - c / 2)...(c + (c / 2)))
-                }
-                else {
+                } else {
                     x = 0
                 }
             }
@@ -72,7 +72,7 @@ struct Question {
     }
     
     private func getRandomNumber(max: Int) -> Int {
-        Int.random(in: 1...max)
+        return Int.random(in: 1..<max)
     }
     
     func getQuestion() -> String {

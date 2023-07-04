@@ -45,10 +45,10 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-Yt-wvZ" userLabel="Back">
-                    <rect key="frame" x="14" y="59" width="45" height="53"/>
+                    <rect key="frame" x="14" y="59" width="45" height="52"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="53" id="1as-UC-c4Z"/>
                         <constraint firstAttribute="width" constant="45" id="Yn5-Dh-WFv"/>
+                        <constraint firstAttribute="height" constant="52" id="wiP-WZ-YSD"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="bg_back_button"/>
