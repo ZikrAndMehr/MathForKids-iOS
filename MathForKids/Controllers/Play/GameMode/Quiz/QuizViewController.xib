@@ -16,6 +16,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="Math_For_Kids" customModuleProvider="target">
             <connections>
+                <outlet property="a" destination="ujx-5g-Tmf" id="j3d-cG-kwx"/>
+                <outlet property="b" destination="mMI-jZ-29u" id="A1F-bD-T38"/>
+                <outlet property="currentQuestionNumber" destination="Bmg-hO-Jhk" id="Tjm-cW-07o"/>
+                <outlet property="operation" destination="p7w-Nj-2kW" id="bKH-O8-k8m"/>
+                <outlet property="optionA" destination="W9F-UR-Uhl" id="wOC-vO-fg2"/>
+                <outlet property="optionB" destination="frS-Ha-Yxc" id="ifD-FS-fQa"/>
+                <outlet property="optionC" destination="NLY-Zj-xaQ" id="adL-vY-14X"/>
+                <outlet property="optionD" destination="m20-Hr-S8t" id="Q9n-y3-OUz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,6 +50,9 @@
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" backgroundImage="bg_back_button"/>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="gM8-Mc-sUI"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-hO-Jhk" userLabel="NumberOfQuestions">
                     <rect key="frame" x="299" y="59" width="80" height="50"/>
@@ -53,21 +64,153 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="s4E-Kb-VQz">
+                    <rect key="frame" x="14" y="401" width="365" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujx-5g-Tmf">
+                            <rect key="frame" x="0.0" y="0.0" width="73" height="50"/>
+                            <color key="backgroundColor" name="Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Xmp-hm-Z1P"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7w-Nj-2kW">
+                            <rect key="frame" x="73" y="0.0" width="73" height="50"/>
+                            <color key="backgroundColor" name="Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="CH1-9l-nrH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-jZ-29u">
+                            <rect key="frame" x="146" y="0.0" width="73" height="50"/>
+                            <color key="backgroundColor" name="Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="5Di-K3-IUU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbH-Pm-odp" userLabel="Label">
+                            <rect key="frame" x="219" y="0.0" width="73" height="50"/>
+                            <color key="backgroundColor" name="Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="wW4-lG-mj2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPr-1I-7rg" userLabel="Label">
+                            <rect key="frame" x="292" y="0.0" width="73" height="50"/>
+                            <color key="backgroundColor" name="Orange"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="EgQ-wl-nZ3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="34"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Ne-4P-j7q">
+                    <rect key="frame" x="8" y="606" width="377" height="200"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QDO-UQ-eNt">
+                            <rect key="frame" x="0.0" y="0.0" width="377" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9F-UR-Uhl">
+                                    <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="b86-PL-6aC"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="A" backgroundImage="iv_quiz_button">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="optionAClicked:" destination="-1" eventType="touchUpInside" id="Ood-tU-A09"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frS-Ha-Yxc">
+                                    <rect key="frame" x="193.66666666666663" y="0.0" width="183.33333333333337" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="SQ3-bt-nvp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="B" backgroundImage="iv_quiz_button">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="optionBClicked:" destination="-1" eventType="touchUpInside" id="TGx-4v-mpZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-ZI-7go">
+                            <rect key="frame" x="0.0" y="100" width="377" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLY-Zj-xaQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="183.66666666666666" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="ixA-BB-JgG"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="C" backgroundImage="iv_quiz_button">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="optionCClicked:" destination="-1" eventType="touchUpInside" id="nr7-Jb-iSk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m20-Hr-S8t">
+                                    <rect key="frame" x="193.66666666666663" y="0.0" width="183.33333333333337" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="hkC-TE-Qss"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="D" backgroundImage="iv_quiz_button">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="optionDClicked:" destination="-1" eventType="touchUpInside" id="7Hd-Oj-4xC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bmg-hO-Jhk" secondAttribute="trailing" constant="14" id="08l-4i-e1s"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0Ne-4P-j7q" secondAttribute="bottom" constant="12" id="35D-bt-v1f"/>
                 <constraint firstItem="S6V-HM-YHF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CyJ-gc-exd"/>
                 <constraint firstItem="6F6-Q1-rOs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Fan-Ki-rvQ"/>
                 <constraint firstAttribute="bottom" secondItem="6F6-Q1-rOs" secondAttribute="bottom" id="K6W-SC-S8d"/>
                 <constraint firstItem="Bmg-hO-Jhk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="L6c-pY-69a"/>
                 <constraint firstItem="6F6-Q1-rOs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="N97-YX-Bou"/>
                 <constraint firstAttribute="trailing" secondItem="6F6-Q1-rOs" secondAttribute="trailing" id="Qsa-mp-QQP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s4E-Kb-VQz" secondAttribute="trailing" constant="14" id="X5T-Vh-Tsy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Ne-4P-j7q" secondAttribute="trailing" constant="8" id="Xtm-so-sN9"/>
                 <constraint firstItem="A4E-sl-PCv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="at7-Wu-XIp"/>
                 <constraint firstItem="A4E-sl-PCv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kux-j0-ClR"/>
+                <constraint firstItem="0Ne-4P-j7q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="nry-rx-fYh"/>
+                <constraint firstItem="s4E-Kb-VQz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="ocU-BK-8kS"/>
                 <constraint firstItem="S6V-HM-YHF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="qWl-eU-XhZ"/>
                 <constraint firstAttribute="trailing" secondItem="A4E-sl-PCv" secondAttribute="trailing" id="riA-YI-znu"/>
+                <constraint firstItem="s4E-Kb-VQz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="y63-6d-xcd"/>
             </constraints>
             <point key="canvasLocation" x="11.450381679389313" y="-11.267605633802818"/>
         </view>
@@ -75,6 +218,10 @@
     <resources>
         <image name="bg_back_button" width="93" height="107.33333587646484"/>
         <image name="bg_quiz_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <image name="iv_quiz_button" width="150" height="83.333335876464844"/>
+        <namedColor name="Orange">
+            <color red="1" green="0.74117647058823533" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="PrimaryColor4">
             <color red="0.60784313725490191" green="0.73333333333333328" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

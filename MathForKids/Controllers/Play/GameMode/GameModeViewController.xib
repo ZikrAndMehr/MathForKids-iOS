@@ -72,6 +72,9 @@
                                     <state key="normal" title="Quiz" backgroundImage="iv_quiz">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="quizButtonClicked:" destination="-1" eventType="touchUpInside" id="z8N-kq-12N"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

@@ -82,6 +82,7 @@ class ResultViewController: UIViewController {
     }
     
     private func navigateToQuizVC() {
-        
+        let quizVC = QuizViewController(operationString: operationString)
+        self.navigationController?.pushViewController(quizVC, animated: true)
     }
 }

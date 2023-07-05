@@ -28,4 +28,9 @@ class GameModeViewController: UIViewController {
         let practiceVC = PracticeViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(practiceVC, animated: true)
     }
+    
+    @IBAction func quizButtonClicked(_ sender: UIButton) {
+        let quizVC = QuizViewController(operationString: keyOperation)
+        self.navigationController?.pushViewController(quizVC, animated: true)
+    }
 }
