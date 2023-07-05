@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC111B2F2A553AB400926F63 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC111B2D2A553AB400926F63 /* ResultViewController.swift */; };
+		CC111B302A553AB400926F63 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC111B2E2A553AB400926F63 /* ResultViewController.xib */; };
+		CC111B322A55580300926F63 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC111B312A55580300926F63 /* Localizable.strings */; };
 		CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23704E2A3EF504001B838E /* AppConstants.swift */; };
 		CC29B04A2A40277C00C6DAFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29B0492A40277C00C6DAFD /* Question.swift */; };
 		CC5635232A3F039F004C7323 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5635212A3F039F004C7323 /* PracticeViewController.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC111B2D2A553AB400926F63 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CC111B2E2A553AB400926F63 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		CC111B312A55580300926F63 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CC23704E2A3EF504001B838E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		CC29B0492A40277C00C6DAFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CC5635212A3F039F004C7323 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC111B2C2A553A9B00926F63 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				CC111B2D2A553AB400926F63 /* ResultViewController.swift */,
+				CC111B2E2A553AB400926F63 /* ResultViewController.xib */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		CC23704C2A3EF0F8001B838E /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +89,7 @@
 				CCB5D0152A3AEED2004B9A36 /* LaunchScreen.storyboard */,
 				CCB5D0182A3AEED2004B9A36 /* Info.plist */,
 				CC5635252A3F0548004C7323 /* Colors.xcassets */,
+				CC111B312A55580300926F63 /* Localizable.strings */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -129,6 +145,7 @@
 				CC6E7D442A3E4BDC00E326CA /* GameModeViewController.xib */,
 				CCA1E3052A40E146006A70D3 /* Quiz */,
 				CC5635202A3F037E004C7323 /* Practice */,
+				CC111B2C2A553A9B00926F63 /* Result */,
 			);
 			path = GameMode;
 			sourceTree = "<group>";
@@ -256,9 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5635262A3F0548004C7323 /* Colors.xcassets in Resources */,
+				CC111B322A55580300926F63 /* Localizable.strings in Resources */,
 				CCB5D0172A3AEED2004B9A36 /* LaunchScreen.storyboard in Resources */,
 				CC6E7D462A3E4BDC00E326CA /* GameModeViewController.xib in Resources */,
 				CCDF13DE2A3C75F400885E9D /* OptionsViewController.xib in Resources */,
+				CC111B302A553AB400926F63 /* ResultViewController.xib in Resources */,
 				CCDF13D72A3C6CBF00885E9D /* carter_one_regular.ttf in Resources */,
 				CCA1E3092A40E176006A70D3 /* QuizViewController.xib in Resources */,
 				CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */,
@@ -285,6 +304,7 @@
 				CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */,
 				CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */,
 				CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */,
+				CC111B2F2A553AB400926F63 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

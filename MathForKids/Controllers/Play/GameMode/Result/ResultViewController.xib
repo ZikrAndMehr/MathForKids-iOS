@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="carter_one_regular.ttf">
+            <string>CarterOne</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="Math_For_Kids" customModuleProvider="target">
+            <connections>
+                <outlet property="correctQuestionCountLabel" destination="M3K-i7-AEv" id="Ppe-lj-iNh"/>
+                <outlet property="correctQuestionsLabel" destination="B44-lz-Nbd" id="0Vu-SS-DyS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wrongQuestionCountLabel" destination="gmC-5n-tRW" id="qGt-NE-tcu"/>
+                <outlet property="wrongQuestionsLabel" destination="KP1-PQ-XpQ" id="mDN-um-W5T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_practice_controller" translatesAutoresizingMaskIntoConstraints="NO" id="PU7-bb-D9B" userLabel="ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhM-aw-21f">
+                    <rect key="frame" x="128.33333333333337" y="159" width="173.66666666666663" height="100.33333333333331"/>
+                    <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="65"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FZU-7w-rMW">
+                    <rect key="frame" x="24" y="267.33333333333331" width="382" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3K-i7-AEv">
+                            <rect key="frame" x="0.0" y="0.0" width="183" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="pJf-7T-mQe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="30"/>
+                            <color key="textColor" name="Green"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmC-5n-tRW">
+                            <rect key="frame" x="199" y="0.0" width="183" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="nK0-nG-c4c"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="30"/>
+                            <color key="textColor" name="Red"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="zvW-AP-Cr9">
+                    <rect key="frame" x="24" y="331.33333333333331" width="382" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B44-lz-Nbd">
+                            <rect key="frame" x="0.0" y="0.0" width="175" height="28"/>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="18"/>
+                            <color key="textColor" name="Green"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP1-PQ-XpQ">
+                            <rect key="frame" x="207" y="0.0" width="175" height="28"/>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="18"/>
+                            <color key="textColor" name="Red"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Yk7-tq-8KU">
+                    <rect key="frame" x="24" y="407.33333333333331" width="382" height="83.333333333333314"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-HP-0gF">
+                            <rect key="frame" x="0.0" y="0.0" width="175" height="83.333333333333329"/>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Restart" backgroundImage="iv_quiz_button">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="restartButtonClicked:" destination="-1" eventType="touchUpInside" id="lOD-Rb-gbZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpU-4N-7gO">
+                            <rect key="frame" x="207" y="0.0" width="175" height="83.333333333333329"/>
+                            <fontDescription key="fontDescription" name="CarterOne" family="Carter One" pointSize="24"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Exit" backgroundImage="iv_quiz_button">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="exitButtonClicked:" destination="-1" eventType="touchUpInside" id="pW8-I6-xBk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="PU7-bb-D9B" secondAttribute="bottom" id="08Q-Ky-7Jg"/>
+                <constraint firstItem="PU7-bb-D9B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3Yu-NW-Qaj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zvW-AP-Cr9" secondAttribute="trailing" constant="24" id="8Po-xS-wJp"/>
+                <constraint firstItem="ZhM-aw-21f" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kfi-FQ-qBb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FZU-7w-rMW" secondAttribute="trailing" constant="24" id="Nvl-dn-NNp"/>
+                <constraint firstItem="FZU-7w-rMW" firstAttribute="top" secondItem="ZhM-aw-21f" secondAttribute="bottom" constant="8" id="Rfj-dk-BbO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yk7-tq-8KU" secondAttribute="trailing" constant="24" id="SDd-QA-QcI"/>
+                <constraint firstItem="Yk7-tq-8KU" firstAttribute="top" secondItem="zvW-AP-Cr9" secondAttribute="bottom" constant="48" id="Z0t-rK-jte"/>
+                <constraint firstItem="PU7-bb-D9B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b8g-3e-POb"/>
+                <constraint firstItem="Yk7-tq-8KU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="epK-vC-W8U"/>
+                <constraint firstItem="ZhM-aw-21f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="kAF-xZ-n0r"/>
+                <constraint firstAttribute="trailing" secondItem="PU7-bb-D9B" secondAttribute="trailing" id="n58-vQ-Oh1"/>
+                <constraint firstItem="zvW-AP-Cr9" firstAttribute="top" secondItem="FZU-7w-rMW" secondAttribute="bottom" constant="24" id="pmq-2P-8PB"/>
+                <constraint firstItem="zvW-AP-Cr9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="x13-tD-rOw"/>
+                <constraint firstItem="FZU-7w-rMW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="xLP-UX-pv3"/>
+            </constraints>
+            <point key="canvasLocation" x="50" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_practice_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <image name="iv_quiz_button" width="150" height="83.333335876464844"/>
+        <namedColor name="Green">
+            <color red="0.16862745098039217" green="0.57647058823529407" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Red">
+            <color red="0.72941176470588232" green="0.094117647058823528" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

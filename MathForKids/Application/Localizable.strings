@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  MathForKids
+
+  Created by Zokirjon Mamadjonov on 05/07/2023.
+  
+*/
+
+//ResultViewController
+"correct_question_count" = "Correct=%d";
+"wrong_question_count" = "Wrong=%d";

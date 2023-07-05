@@ -94,38 +94,53 @@ class PracticeViewController: UIViewController {
     }
     
     @IBAction private func backButtonClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        guard let navigationController = self.navigationController else { return }
+        
+        if let viewController = navigationController.viewControllers.first(where: { $0 is GameModeViewController
+        }) {
+            navigationController.popToViewController(viewController, animated: true)
+        } else {
+            navigationController.popViewController(animated: true)
+        }
     }
     
     @IBAction private func optionAClicked(_ sender: UIButton) {
-        if sender.titleLabel?.text == String(ans) {
-            correctOptionSelected(button: sender)
+        guard let text = sender.titleLabel?.text else { return }
+        
+        if text == String(ans) {
+            correctOptionSelected(text)
         } else {
-            wrongOptionSelected(button: sender)
+            wrongOptionSelected(text)
         }
     }
     
     @IBAction private func optionBClicked(_ sender: UIButton) {
-        if sender.titleLabel?.text == String(ans) {
-            correctOptionSelected(button: sender)
+        guard let text = sender.titleLabel?.text else { return }
+        
+        if text == String(ans) {
+            correctOptionSelected(text)
         } else {
-            wrongOptionSelected(button: sender)
+            wrongOptionSelected(text)
         }
     }
     
     @IBAction private func optionCClicked(_ sender: UIButton) {
-        if sender.titleLabel?.text == String(ans) {
-            correctOptionSelected(button: sender)
+        guard let text = sender.titleLabel?.text else { return }
+        
+        if text == String(ans) {
+            correctOptionSelected(text)
         } else {
-            wrongOptionSelected(button: sender)
+            wrongOptionSelected(text)
         }
     }
     
     @IBAction private func optionDClicked(_ sender: UIButton) {
-        if sender.titleLabel?.text == String(ans) {
-            correctOptionSelected(button: sender)
+        guard let text = sender.titleLabel?.text else { return }
+        
+        if text == String(ans) {
+            correctOptionSelected(text)
         } else {
-            wrongOptionSelected(button: sender)
+            wrongOptionSelected(text)
         }
     }
     
@@ -133,7 +148,7 @@ class PracticeViewController: UIViewController {
         UserDefaults.standard.object(forKey: key) as? Int
     }
     
-    private func correctOptionSelected(button: UIButton) {
+    private func correctOptionSelected(_ text: String) {
         let currentQuestion = questions[questionNumber]
 
         if showNextQuestion {
@@ -142,7 +157,7 @@ class PracticeViewController: UIViewController {
                 "\(operationString)" +
                 "\(currentQuestion.getB())" +
                 "\(AppConstants.equal)" +
-                "\(String(describing: button.titleLabel))"
+                "\(text)\n"
             )
             correctQuestionsCount += 1
         }
@@ -151,15 +166,14 @@ class PracticeViewController: UIViewController {
         showNextQuestion = true
         
         if questionNumber == 10 {
-            // TODO: needs to be modified after Reulult page
-            self.navigationController?.popViewController(animated: true)
+            navigateToResultVC()
         } else {
             numberOfCorrectQuestion.text = String(correctQuestionsCount)
             setupQuestion()
         }
     }
     
-    private func wrongOptionSelected(button: UIButton) {
+    private func wrongOptionSelected(_ text: String) {
         showToast(message: "Wrong answer, Please try again!")
         
         if showNextQuestion {
@@ -169,7 +183,7 @@ class PracticeViewController: UIViewController {
                 "\(operationString)" +
                 "\(currentQuestion.getB())" +
                 "\(AppConstants.equal)" +
-                "\(String(describing: button.titleLabel))"
+                "\(text)\n"
             )
             wrongQuestionsCount += 1
             showNextQuestion = false
@@ -185,6 +199,19 @@ class PracticeViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             alertController.dismiss(animated: true, completion: nil)
+            alertController.removeFromParent()
         }
+    }
+    
+    private func navigateToResultVC() {
+        let resultVC = ResultViewController(
+            preViewControllerNibName: "PracticeViewController",
+            operationString: operationString,
+            correctQuestionCount: correctQuestionsCount,
+            wrongQuestionCount: wrongQuestionsCount,
+            correctQuestions: correctQuestions,
+            wrongQuestions: wrongQuestions
+        )
+        self.navigationController?.pushViewController(resultVC, animated: true)
     }
 }
