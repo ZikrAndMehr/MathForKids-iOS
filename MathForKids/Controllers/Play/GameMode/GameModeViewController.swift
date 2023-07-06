@@ -33,4 +33,9 @@ class GameModeViewController: UIViewController {
         let quizVC = QuizViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(quizVC, animated: true)
     }
+    
+    @IBAction func duelButtonClicked(_ sender: UIButton) {
+        let duelVC = DuelViewController(operationString: keyOperation)
+        self.navigationController?.pushViewController(duelVC, animated: true)
+    }
 }

@@ -93,6 +93,9 @@
                                     <state key="normal" title="Duel" backgroundImage="iv_duel">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="duelButtonClicked:" destination="-1" eventType="touchUpInside" id="zL6-D5-fC2"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIg-lO-aE1">
                                     <rect key="frame" x="165" y="0.0" width="140" height="140"/>

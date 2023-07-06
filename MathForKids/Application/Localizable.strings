@@ -9,3 +9,5 @@
 //ResultViewController
 "correct_question_count" = "Correct=%d";
 "wrong_question_count" = "Wrong=%d";
+"player_1" = "Player 1=%d";
+"player_2" = "Player 2=%d";

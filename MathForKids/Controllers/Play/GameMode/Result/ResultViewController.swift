@@ -43,7 +43,24 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
+        if preViewControllerNibName == "DuelViewController" {
+            setupViewsForDuel()
+        } else {
+            setupViews()
+        }
+    }
+    
+    private func setupViewsForDuel() {
+        let correctQuestionCountLS = NSLocalizedString("player_1", comment: "")
+        correctQuestionCountLabel.text = String(format: correctQuestionCountLS, correctQuestionCount)
+
+        let wrongQuestionCountLS = NSLocalizedString("player_2", comment: "")
+        wrongQuestionCountLabel.text = String(format: wrongQuestionCountLS, wrongQuestionCount)
+        wrongQuestionCountLabel.textColor = UIColor(named: "Green")
+        
+        correctQuestionsLabel.text = correctQuestions
+        wrongQuestionsLabel.text = wrongQuestions
+        wrongQuestionsLabel.textColor = UIColor(named: "Green")
     }
     
     private func setupViews() {
@@ -63,6 +80,8 @@ class ResultViewController: UIViewController {
             navigateToPracticeVC()
         case "QuizViewController":
             navigateToQuizVC()
+        case "DuelViewController":
+            navigateToDuelVC()
         default: break
         }
     }
@@ -76,6 +95,7 @@ class ResultViewController: UIViewController {
         }
     }
     
+    // TODO: Currecnt VC should be removed from navigation stack!
     private func navigateToPracticeVC() {
         let practiceVC = PracticeViewController(operationString: operationString)
         self.navigationController?.pushViewController(practiceVC, animated: true)
@@ -84,5 +104,10 @@ class ResultViewController: UIViewController {
     private func navigateToQuizVC() {
         let quizVC = QuizViewController(operationString: operationString)
         self.navigationController?.pushViewController(quizVC, animated: true)
+    }
+    
+    private func navigateToDuelVC() {
+        let duelVC = DuelViewController(operationString: operationString)
+        self.navigationController?.pushViewController(duelVC, animated: true)
     }
 }
