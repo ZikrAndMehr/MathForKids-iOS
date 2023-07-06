@@ -11,3 +11,7 @@
 "wrong_question_count" = "Wrong=%d";
 "player_1" = "Player 1=%d";
 "player_2" = "Player 2=%d";
+
+//TimeViewController
+"seconds_remaining" = "%d Seconds remaining";
+"not_solved" = "Not Solved!\n";

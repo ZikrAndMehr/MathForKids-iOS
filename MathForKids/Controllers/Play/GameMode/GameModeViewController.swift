@@ -38,4 +38,9 @@ class GameModeViewController: UIViewController {
         let duelVC = DuelViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(duelVC, animated: true)
     }
+    
+    @IBAction func timeButtonClicked(_ sender: UIButton) {
+        let timeVC = TimeViewController(operationString: keyOperation)
+        self.navigationController?.pushViewController(timeVC, animated: true)
+    }
 }

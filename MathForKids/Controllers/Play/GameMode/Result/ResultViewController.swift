@@ -82,6 +82,8 @@ class ResultViewController: UIViewController {
             navigateToQuizVC()
         case "DuelViewController":
             navigateToDuelVC()
+        case "TimeViewController":
+            navigateToTimeVC()
         default: break
         }
     }
@@ -109,5 +111,10 @@ class ResultViewController: UIViewController {
     private func navigateToDuelVC() {
         let duelVC = DuelViewController(operationString: operationString)
         self.navigationController?.pushViewController(duelVC, animated: true)
+    }
+    
+    private func navigateToTimeVC() {
+        let timeVC = TimeViewController(operationString: operationString)
+        self.navigationController?.pushViewController(timeVC, animated: true)
     }
 }

@@ -23,7 +23,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_game_mode_controller" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-AW-XUt" userLabel="ImageView">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_game_controller" translatesAutoresizingMaskIntoConstraints="NO" id="x1Q-AW-XUt" userLabel="ImageView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggG-9C-Wqe" userLabel="Back">
@@ -109,6 +109,9 @@
                                     <state key="normal" title="Time" backgroundImage="iv_time">
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
+                                    <connections>
+                                        <action selector="timeButtonClicked:" destination="-1" eventType="touchUpInside" id="EWw-o6-6Qw"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -134,7 +137,7 @@
     </objects>
     <resources>
         <image name="bg_back_button" width="93" height="107.33333587646484"/>
-        <image name="bg_game_mode_controller" width="266.66665649414062" height="531.66668701171875"/>
+        <image name="bg_game_controller" width="266.66665649414062" height="531.66668701171875"/>
         <image name="iv_duel" width="93.333335876464844" height="93.333335876464844"/>
         <image name="iv_practice" width="93.333335876464844" height="93.333335876464844"/>
         <image name="iv_quiz" width="93.333335876464844" height="93.333335876464844"/>

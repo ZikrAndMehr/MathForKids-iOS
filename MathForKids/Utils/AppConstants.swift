@@ -13,6 +13,7 @@ struct AppConstants {
     static let multiplication = "×"
     static let division = "÷"
     
+    static let countDownInterval = 1.0
     static let keySecondsValue = "SECONDS"
     static let secondsValue = 10
     static let keyMinValue = "MIN"

@@ -14,6 +14,8 @@
 		CC111B372A5573EC00926F63 /* DuelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC111B352A5573EC00926F63 /* DuelViewController.xib */; };
 		CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23704E2A3EF504001B838E /* AppConstants.swift */; };
 		CC29B04A2A40277C00C6DAFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29B0492A40277C00C6DAFD /* Question.swift */; };
+		CC396E1F2A56AA46002F7892 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC396E1D2A56AA45002F7892 /* TimeViewController.swift */; };
+		CC396E202A56AA46002F7892 /* TimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC396E1E2A56AA46002F7892 /* TimeViewController.xib */; };
 		CC5635232A3F039F004C7323 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5635212A3F039F004C7323 /* PracticeViewController.swift */; };
 		CC5635242A3F039F004C7323 /* PracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5635222A3F039F004C7323 /* PracticeViewController.xib */; };
 		CC5635262A3F0548004C7323 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5635252A3F0548004C7323 /* Colors.xcassets */; };
@@ -42,6 +44,8 @@
 		CC111B352A5573EC00926F63 /* DuelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DuelViewController.xib; sourceTree = "<group>"; };
 		CC23704E2A3EF504001B838E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		CC29B0492A40277C00C6DAFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CC396E1D2A56AA45002F7892 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
+		CC396E1E2A56AA46002F7892 /* TimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeViewController.xib; sourceTree = "<group>"; };
 		CC5635212A3F039F004C7323 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		CC5635222A3F039F004C7323 /* PracticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeViewController.xib; sourceTree = "<group>"; };
 		CC5635252A3F0548004C7323 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -84,13 +88,13 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
-		CC111B332A5573BA00926F63 /* DuelMode */ = {
+		CC111B332A5573BA00926F63 /* Duel */ = {
 			isa = PBXGroup;
 			children = (
 				CC111B342A5573EC00926F63 /* DuelViewController.swift */,
 				CC111B352A5573EC00926F63 /* DuelViewController.xib */,
 			);
-			path = DuelMode;
+			path = Duel;
 			sourceTree = "<group>";
 		};
 		CC23704C2A3EF0F8001B838E /* Application */ = {
@@ -121,6 +125,15 @@
 				CC29B0492A40277C00C6DAFD /* Question.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CC396E1C2A56AA18002F7892 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				CC396E1D2A56AA45002F7892 /* TimeViewController.swift */,
+				CC396E1E2A56AA46002F7892 /* TimeViewController.xib */,
+			);
+			path = Time;
 			sourceTree = "<group>";
 		};
 		CC42B8B82A3E33D3009AEA18 /* Main */ = {
@@ -158,7 +171,8 @@
 				CC6E7D442A3E4BDC00E326CA /* GameModeViewController.xib */,
 				CC5635202A3F037E004C7323 /* Practice */,
 				CCA1E3052A40E146006A70D3 /* Quiz */,
-				CC111B332A5573BA00926F63 /* DuelMode */,
+				CC111B332A5573BA00926F63 /* Duel */,
+				CC396E1C2A56AA18002F7892 /* Time */,
 				CC111B2C2A553A9B00926F63 /* Result */,
 			);
 			path = GameMode;
@@ -297,6 +311,7 @@
 				CCA1E3092A40E176006A70D3 /* QuizViewController.xib in Resources */,
 				CCB5D0142A3AEED2004B9A36 /* Assets.xcassets in Resources */,
 				CC5635242A3F039F004C7323 /* PracticeViewController.xib in Resources */,
+				CC396E202A56AA46002F7892 /* TimeViewController.xib in Resources */,
 				CCB5D0122A3AEED0004B9A36 /* Main.storyboard in Resources */,
 				CC6E7D412A3E41A700E326CA /* PlayMenuViewController.xib in Resources */,
 			);
@@ -319,6 +334,7 @@
 				CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */,
 				CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */,
 				CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */,
+				CC396E1F2A56AA46002F7892 /* TimeViewController.swift in Sources */,
 				CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */,
 				CC111B2F2A553AB400926F63 /* ResultViewController.swift in Sources */,
 			);
