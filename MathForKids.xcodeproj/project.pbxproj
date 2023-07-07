@@ -16,6 +16,7 @@
 		CC29B04A2A40277C00C6DAFD /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC29B0492A40277C00C6DAFD /* Question.swift */; };
 		CC396E1F2A56AA46002F7892 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC396E1D2A56AA45002F7892 /* TimeViewController.swift */; };
 		CC396E202A56AA46002F7892 /* TimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC396E1E2A56AA46002F7892 /* TimeViewController.xib */; };
+		CC396E242A57F198002F7892 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC396E232A57F198002F7892 /* Protocols.swift */; };
 		CC5635232A3F039F004C7323 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5635212A3F039F004C7323 /* PracticeViewController.swift */; };
 		CC5635242A3F039F004C7323 /* PracticeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC5635222A3F039F004C7323 /* PracticeViewController.xib */; };
 		CC5635262A3F0548004C7323 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5635252A3F0548004C7323 /* Colors.xcassets */; };
@@ -46,6 +47,7 @@
 		CC29B0492A40277C00C6DAFD /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CC396E1D2A56AA45002F7892 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		CC396E1E2A56AA46002F7892 /* TimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeViewController.xib; sourceTree = "<group>"; };
+		CC396E232A57F198002F7892 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		CC5635212A3F039F004C7323 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		CC5635222A3F039F004C7323 /* PracticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeViewController.xib; sourceTree = "<group>"; };
 		CC5635252A3F0548004C7323 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		CC23704D2A3EF1A2001B838E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CC396E232A57F198002F7892 /* Protocols.swift */,
 				CC23704E2A3EF504001B838E /* AppConstants.swift */,
 			);
 			path = Utils;
@@ -333,6 +336,7 @@
 				CCDF13DD2A3C75F400885E9D /* OptionsViewController.swift in Sources */,
 				CCB5D00B2A3AEED0004B9A36 /* AppDelegate.swift in Sources */,
 				CC23704F2A3EF504001B838E /* AppConstants.swift in Sources */,
+				CC396E242A57F198002F7892 /* Protocols.swift in Sources */,
 				CC6E7D402A3E41A700E326CA /* PlayMenuViewController.swift in Sources */,
 				CC396E1F2A56AA46002F7892 /* TimeViewController.swift in Sources */,
 				CCB5D00D2A3AEED0004B9A36 /* SceneDelegate.swift in Sources */,

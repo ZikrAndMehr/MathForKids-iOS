@@ -33,6 +33,7 @@ class DuelViewController: UIViewController {
     @IBOutlet private weak var C2Button: UIButton!
     @IBOutlet private weak var D2Button: UIButton!
     
+    private var restart = false
     private var min = AppConstants.minValue
     private var max = AppConstants.maxValue
     private let operationString: String
@@ -56,6 +57,28 @@ class DuelViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if restart {
+            resetValues()
+            setupViews()
+        }
+    }
+    
+    private func resetValues() {
+        restart = false
+        questions.removeAll()
+        questionNumber = 0
+        ans = 0
+        correctQuestions1 = ""
+        correctQuestionsCount1 = 0
+        correctQuestions2 = ""
+        correctQuestionsCount2 = 0
+        
+        correctQuestionsCount1Label.text = String(correctQuestionsCount1)
+        correctQuestionsCount2Label.text = String(correctQuestionsCount2)
     }
     
     private func setupViews() {
@@ -230,6 +253,13 @@ class DuelViewController: UIViewController {
             correctQuestions: correctQuestions1, // Player 1
             wrongQuestions: correctQuestions2 // Player 2
         )
+        resultVC.delegate = self
         self.navigationController?.pushViewController(resultVC, animated: true)
+    }
+}
+
+extension DuelViewController: PreviousViewControllerDelegate {
+    func didReceiveData(_ data: [String : Any]) {
+        restart = data[AppConstants.keyRestart] as? Bool ?? false
     }
 }

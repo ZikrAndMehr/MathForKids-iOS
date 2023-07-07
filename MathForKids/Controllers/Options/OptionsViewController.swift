@@ -9,13 +9,13 @@ import UIKit
 
 class OptionsViewController: UIViewController {
     
-    @IBOutlet weak var secondsLabel: UILabel!
-    @IBOutlet weak var minimumLabel: UILabel!
-    @IBOutlet weak var maximumLabel: UILabel!
+    @IBOutlet private weak var secondsLabel: UILabel!
+    @IBOutlet private weak var minimumLabel: UILabel!
+    @IBOutlet private weak var maximumLabel: UILabel!
     
-    @IBOutlet weak var secondsSlider: UISlider!
-    @IBOutlet weak var minimumSlider: UISlider!
-    @IBOutlet weak var maximumSlider: UISlider!
+    @IBOutlet private weak var secondsSlider: UISlider!
+    @IBOutlet private weak var minimumSlider: UISlider!
+    @IBOutlet private weak var maximumSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,18 +46,18 @@ class OptionsViewController: UIViewController {
         maximumSlider.value = Float(max)
     }
     
-    @IBAction func backButtonClicked(_ sender: Any) {
+    @IBAction private func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func secondsSliderValueChanged(_ sender: UISlider) {
+    @IBAction private func secondsSliderValueChanged(_ sender: UISlider) {
         let roundedValue = getRoundedValueFrom(sliderValue: sender.value, sliderStep: 2)
         sender.value = roundedValue
         secondsLabel.text = String(Int(sender.value))
         saveKeyValuePair(AppConstants.keySecondsValue, Int(roundedValue))
     }
     
-    @IBAction func minimumSliderValueChanged(_ sender: UISlider) {
+    @IBAction private func minimumSliderValueChanged(_ sender: UISlider) {
         let min = getIntValueFrom(key: AppConstants.keyMinValue) ?? AppConstants.minValue
         let roundedValue = getRoundedValueFrom(sliderValue: sender.value, sliderStep: 10)
         
@@ -71,7 +71,7 @@ class OptionsViewController: UIViewController {
         minimumLabel.text = String(Int(sender.value))
     }
     
-    @IBAction func maximumSliderValueChanged(_ sender: UISlider) {
+    @IBAction private func maximumSliderValueChanged(_ sender: UISlider) {
         let max = getIntValueFrom(key: AppConstants.keyMaxValue) ?? AppConstants.maxValue
         let roundedValue = getRoundedValueFrom(sliderValue: sender.value, sliderStep: 10)
         

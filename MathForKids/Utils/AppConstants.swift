@@ -8,6 +8,8 @@
 import Foundation
 
 struct AppConstants {
+    static let keyRestart = "RESTART"
+    
     static let addition = "+"
     static let subtraction = "-"
     static let multiplication = "×"

@@ -29,17 +29,17 @@ class GameModeViewController: UIViewController {
         self.navigationController?.pushViewController(practiceVC, animated: true)
     }
     
-    @IBAction func quizButtonClicked(_ sender: UIButton) {
+    @IBAction private func quizButtonClicked(_ sender: UIButton) {
         let quizVC = QuizViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(quizVC, animated: true)
     }
     
-    @IBAction func duelButtonClicked(_ sender: UIButton) {
+    @IBAction private func duelButtonClicked(_ sender: UIButton) {
         let duelVC = DuelViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(duelVC, animated: true)
     }
     
-    @IBAction func timeButtonClicked(_ sender: UIButton) {
+    @IBAction private func timeButtonClicked(_ sender: UIButton) {
         let timeVC = TimeViewController(operationString: keyOperation)
         self.navigationController?.pushViewController(timeVC, animated: true)
     }

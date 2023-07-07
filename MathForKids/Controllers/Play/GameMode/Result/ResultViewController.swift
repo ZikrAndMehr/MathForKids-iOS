@@ -21,6 +21,8 @@ class ResultViewController: UIViewController {
     private let correctQuestions: String
     private let wrongQuestions: String
     
+    weak var delegate: PreviousViewControllerDelegate?
+    
     init(preViewControllerNibName: String,
          operationString: String,
          correctQuestionCount: Int,
@@ -75,17 +77,7 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction private func restartButtonClicked(_ sender: UIButton) {
-        switch preViewControllerNibName {
-        case "PracticeViewController":
-            navigateToPracticeVC()
-        case "QuizViewController":
-            navigateToQuizVC()
-        case "DuelViewController":
-            navigateToDuelVC()
-        case "TimeViewController":
-            navigateToTimeVC()
-        default: break
-        }
+        dismissViewControllerAndPassData()
     }
     
     @IBAction private func exitButtonClicked(_ sender: UIButton) {
@@ -96,25 +88,10 @@ class ResultViewController: UIViewController {
             navigationController.popToViewController(viewController, animated: true)
         }
     }
-    
-    // TODO: Currecnt VC should be removed from navigation stack!
-    private func navigateToPracticeVC() {
-        let practiceVC = PracticeViewController(operationString: operationString)
-        self.navigationController?.pushViewController(practiceVC, animated: true)
-    }
-    
-    private func navigateToQuizVC() {
-        let quizVC = QuizViewController(operationString: operationString)
-        self.navigationController?.pushViewController(quizVC, animated: true)
-    }
-    
-    private func navigateToDuelVC() {
-        let duelVC = DuelViewController(operationString: operationString)
-        self.navigationController?.pushViewController(duelVC, animated: true)
-    }
-    
-    private func navigateToTimeVC() {
-        let timeVC = TimeViewController(operationString: operationString)
-        self.navigationController?.pushViewController(timeVC, animated: true)
+       
+    private func dismissViewControllerAndPassData() {
+        let data = [AppConstants.keyRestart: true]
+        delegate?.didReceiveData(data)
+        navigationController?.popViewController(animated: true)
     }
 }

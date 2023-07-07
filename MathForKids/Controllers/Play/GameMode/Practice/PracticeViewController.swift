@@ -23,6 +23,7 @@ class PracticeViewController: UIViewController {
     @IBOutlet private weak var optionC: UIButton!
     @IBOutlet private weak var optionD: UIButton!
     
+    private var restart = false
     private var min = AppConstants.minValue
     private var max = AppConstants.maxValue
     private let operationString: String
@@ -47,6 +48,29 @@ class PracticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if restart {
+            resetValues()
+            setupViews()
+        }
+    }
+    
+    private func resetValues() {
+        restart = false
+        questions.removeAll()
+        questionNumber = 0
+        ans = 0
+        showNextQuestion = true
+        correctQuestions = ""
+        correctQuestionsCount = 0
+        wrongQuestions = ""
+        wrongQuestionsCount = 0
+        
+        numberOfCorrectQuestion.text = String(correctQuestionsCount)
+        numberOfWrongQuestion.text = String(wrongQuestionsCount)
     }
     
     private func setupViews() {
@@ -212,6 +236,13 @@ class PracticeViewController: UIViewController {
             correctQuestions: correctQuestions,
             wrongQuestions: wrongQuestions
         )
+        resultVC.delegate = self
         self.navigationController?.pushViewController(resultVC, animated: true)
+    }
+}
+
+extension PracticeViewController: PreviousViewControllerDelegate {
+    func didReceiveData(_ data: [String : Any]) {
+        restart = data[AppConstants.keyRestart] as? Bool ?? false
     }
 }
