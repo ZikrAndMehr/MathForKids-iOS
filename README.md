@@ -1,3 +1,4 @@
+
 # Math For Kids
 
 Math For Kids is a simple math game application designed for everyone from kids to adults. It offers a collection of games focused on addition, subtraction, multiplication, and division, providing a fun and interactive way to improve math skills. Boost your brain power with this engaging game suitable for all ages.
@@ -30,3 +31,7 @@ This project is developed using the Model-View-Controller (MVC) design architect
 3. Select your desired game mode (Practice, Quiz, Duel, or Time). 
 4. Follow the on-screen instructions and solve the math problems presented to you. 
 5. Track your progress and strive to improve your math skills.
+
+## License
+
+This project is licensed under the [Apache License 2.0](./LICENSE).
